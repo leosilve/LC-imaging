@@ -1,5 +1,6 @@
 # This script imports images from file
 library(magick)
+library(ggplot2)
 library(grid)
 library(gridExtra)
 library(imager)
@@ -8,9 +9,9 @@ bitsToInt<-function(x) {
 }
 # The images I saved have 8bit color depth, i.e. for each color the intensity ranges between 0 and 255
 # Clear explanation https://computergraphics.stackexchange.com/questions/5085/light-intensity-of-an-rgb-value
-# I can calculate the intensity if I know the wavelength, maybe?
+# I can calculate the intensity if I know the wavelength, maybe?  
 
-myImageFilename <- '~/OneDrive - UNSW/Data/Microscope/5x_condenser_focused.bmp'
+myImageFilename <- '~/OneDrive - UNSW/Data/Microscope/2019_05_17/22.5deg_1V.bmp'
 myImage <- load.image(myImageFilename)
 plot(myImage) # Shows it
 dim(myImage)
